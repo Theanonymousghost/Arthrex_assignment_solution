@@ -48,27 +48,27 @@ class TestContactedCandidates(unittest.TestCase):
         contacted = []
         current = deque()
 
-    def test_direct_connection(self):
+    def test_indirect_connection_m(self):
         contacted_candidates('M')
         self.assertEqual(contacted, ['L', 'M', 'N', 'A', 'K', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z'])
 
-    def test_direct_connection(self):
+    def test_direct_connection_a(self):
         contacted_candidates('A')
         self.assertEqual(contacted, ['A', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z'])
 
-    def test_indirect_connection(self):
+    def test_direct_connection(self):
         contacted_candidates('K')
         self.assertEqual(contacted, ['K', 'L', 'M', 'N', 'A', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z'])
 
-    def test_no_connection(self):
+    def test_indirect_connection_z(self):
         contacted_candidates('Z')
         self.assertEqual(contacted, ['W', 'X', 'Y', 'Z', 'V'])
 
-    def test_no_connection(self):
+    def test_no_connection_empty(self):
         contacted_candidates('')
         self.assertEqual(contacted, [])
 
-    def test_key_in_value(self):
+    def test_key_in_value_v(self):
         contacted_candidates('V')
         self.assertIn('V', contacted)
         self.assertIn('W', contacted)
