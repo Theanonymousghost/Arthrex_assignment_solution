@@ -51,7 +51,11 @@ The final contacted list would be: ['A', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z']
 
 **Example with input from the problem statement:**
 - **Input:** 'M'
-+ **output:** ['L', 'M', 'N', 'A', 'K', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z']
+- 
+  **Output:** ['L', 'M', 'N', 'A', 'K', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z']
++ **Input:** 'A'
++ 
+  **Output:** ['A', 'B', 'C', 'J', 'V', 'W', 'X', 'Y', 'Z']
 
 **Testing of Code:**
 - Testing is automated using **unittest** python library.
